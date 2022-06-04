@@ -1,0 +1,70 @@
+import java.util.Scanner;
+public class latihan_uap_no1 {
+  public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+    
+    int penjualan_minggu_awal, penjualan_minggu_akhir, total_penjualan, harga_modal, harga_jual, total_modal,
+        keuntungan;
+    String keterangan;
+
+    final String garis = "|======================================================|";
+    final String garis2 = "===================";
+    
+
+    System.out.println("=== PERHITUNGAN Penjualan Baju Gamis ( Selama Ramadhan 1443 H ) - GAMIS FASHION === ");
+    System.out.println("|===========================================================|");
+    System.out.print("Silahkan input Jumlah Penjualan Baju Gamis Minggu Pertama : ");
+    penjualan_minggu_awal = input.nextInt();
+    System.out.println("|===========================================================|");
+    System.out.print("Silahkan input Jumlah Penjualan Baju Gamis Sampai Minggu Terakhir : ");
+    penjualan_minggu_akhir = input.nextInt();
+    System.out.println("|===========================================================|");
+    System.out.println("|                               |                           |");
+    System.out.println("|                               |                           |");
+    System.out.println("v                               v                           v");
+
+    total_penjualan = 0;
+    total_penjualan = penjualan_minggu_awal + penjualan_minggu_akhir;
+    
+    keterangan = "deklarasi";
+    harga_modal = 0;
+    harga_jual = 0;
+    total_modal = 0;
+    keuntungan = 0;
+    
+    if (total_penjualan == 100) {
+      keterangan = "ANDA MENCAPAI TARGET PENJUAL SEBULAN";
+      harga_modal = 80000;
+      harga_jual = 150000;
+      total_modal = total_penjualan * harga_modal;
+      keuntungan = total_penjualan * 70000;
+    } else if (total_penjualan < 100) {
+      keterangan = "ANDA MENCAPAI TIDAK TARGET PENJUALAN SEBULAN";
+      harga_modal = 80000;
+      harga_jual = 150000;
+      total_modal = total_penjualan * harga_modal;
+      keuntungan = total_penjualan * 70000;
+    } else if (total_penjualan > 100) {
+      keterangan = "ANDA MELEBIHI TARGET PENJUALAN SEBULAN";
+      harga_modal = 80000;
+      harga_jual = 150000;
+      total_modal = total_penjualan * harga_modal;
+      keuntungan = total_penjualan * 70000;
+
+    }
+
+    System.out.println("                  Total Penjualan Adalah = " + total_penjualan);
+    System.out.println(" ");
+    
+    System.out.println(keterangan);
+    System.out.println("===================");
+    System.out.println("Dengan rincian Harga Modal Rp."+ harga_modal + " ,Dijual Rp."+ harga_jual);
+    System.out.println("Modal = "+ total_modal + " rupiah");
+    System.out.println("Keuntungan = "+ keuntungan + " rupiah");
+
+
+    input.close();
+
+  }
+
+}
